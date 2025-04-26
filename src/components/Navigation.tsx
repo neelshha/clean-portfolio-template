@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
+import resume from '../assets/NeelShahResume.pdf';
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -114,10 +115,10 @@ export function Navigation() {
               Contact
             </a>
             <a
-              href="/src/assets/NeelShahResume.pdf"
+              href= {resume}
               download
               onClick={() => setIsMenuOpen(false)}
-              className="block underline decoration-dotted underline-offset-2 text-neutral-900  dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-xl font-gambarino tracking-tight leading-none flex items-center gap-1"
+              className="underline decoration-dotted underline-offset-2 text-neutral-900  dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-xl font-gambarino tracking-tight leading-none flex items-center gap-1"
             >
               Resume
             </a>
@@ -172,9 +173,9 @@ export function Navigation() {
               Contact
             </a>
             <a
-              href="/src/assets/NeelShahResume.pdf"
+              href= {resume}
               download
-              className="block underline decoration-dotted underline-offset-2 text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors text-sm font-gambarino tracking-tight leading-none flex items-center gap-1"
+              className="underline decoration-dotted underline-offset-2 text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors text-sm font-gambarino tracking-tight leading-none flex items-center gap-1"
             >
               Resume
             </a>

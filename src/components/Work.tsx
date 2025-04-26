@@ -1,16 +1,19 @@
+import aiotize from '../assets/aiotize.png';
+import cyber from '../assets/cyber.png';
+
 export function Work() {
   const projects = [
     {
       title: "Aiotize Inc.",
       description: "Logo creation and brand guidelines for Aiotize Inc.",
-      image: "src/assets/aiotize.png",
+      image: aiotize,
       technologies: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
       demoLink: "https://www.behance.net/gallery/218932957/Aiotize-Inc-Branding",
     },
     {
       title: "Cyber Chakravyuh",
       description: "Website for MPSTME's official Cybersecurity Club",
-      image: "src/assets/cyber.png",
+      image: cyber,
       technologies: ["HTML", "CSS", "Javascript"],
       demoLink: "https://www.cyberchakravyuh.in/",
     },
