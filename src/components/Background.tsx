@@ -37,7 +37,7 @@ const positionsOfResponsibility = [
   {
     organization: "Cyber Chakravyuh",
     role: "Technical Head",
-    period: "2024 - 2025",
+    period: "Sep 2024 - May 2025",
     description: "Led the cybersecurity event’s technical strategy, including problem-setting, platform management, and workshop curation to foster interest and participation in cybersecurity.",
   },
   {

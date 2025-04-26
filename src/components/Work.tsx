@@ -68,6 +68,8 @@ export function Work() {
                     View Project
                     <span>→</span>
                   </a>
+
+                  <hr className="my-2 border-t border-neutral-300 dark:border-neutral-700 w-full" />
                 </div>
               </div>
             </div>
