@@ -44,7 +44,7 @@ export function Navigation() {
   const isActive = (section: string) => activeSection === section;
 
   const navLinkClass = (section: string) => 
-    `block text-neutral-400 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-sm font-gambarino tracking-tight leading-none ${
+    `block text-neutral-400 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-md font-gambarino tracking-tight leading-none ${
       isActive(section) ? '!text-neutral-900 dark:!text-white font-medium' : ''
     }`;
 
@@ -118,9 +118,9 @@ export function Navigation() {
               href= {resume}
               download
               onClick={() => setIsMenuOpen(false)}
-              className="underline decoration-dotted underline-offset-2 text-neutral-900  dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-xl font-gambarino tracking-tight leading-none flex items-center gap-1"
+              className="underline decoration-dotted underline-offset-2 text-neutral-400 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl font-gambarino tracking-tight leading-none flex items-center gap-1"
             >
-              Resume
+              Resume*
             </a>
           </div>
         </div>
@@ -175,9 +175,9 @@ export function Navigation() {
             <a
               href= {resume}
               download
-              className="underline decoration-dotted underline-offset-2 text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors text-sm font-gambarino tracking-tight leading-none flex items-center gap-1"
+              className="underline decoration-dotted underline-offset-2 text-neutral-400 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-sm font-gambarino tracking-tight leading-none flex items-center gap-1"
             >
-              Resume
+              Resume*
             </a>
           </div>
 
