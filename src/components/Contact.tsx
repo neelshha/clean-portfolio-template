@@ -38,7 +38,7 @@ export function Contact() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="font-gambarino text-4xl sm:text-5xl md:text-6xl font-semibold text-neutral-900 dark:text-white leading-tight">
+          <h2 className="font-gambarino text-4xl sm:text-5xl md:text-6xl text-neutral-900 dark:text-white leading-tight">
             Let's
             <br />
             Connect
