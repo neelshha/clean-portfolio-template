@@ -5,7 +5,7 @@ export function About() {
       className="min-h-screen w-full flex flex-col items-start justify-center bg-white dark:bg-black text-neutral-900 dark:text-white transition-colors px-6 sm:px-8 py-12 sm:py-8"
       aria-labelledby="about-title"
     >
-      <div className="flex flex-col w-full max-w-6xl mx-auto py-24">
+      <div className="flex flex-col w-full max-w-7xl mx-auto py-24">
         {/* Center: Bio */}
         <div className="w-full flex items-start justify-center">
           <div className="max-w-xl text-base leading-relaxed">
