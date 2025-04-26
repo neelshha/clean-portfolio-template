@@ -57,7 +57,7 @@ export function Navigation() {
     <>
       {/* Mobile/Tablet menu */}
       <div 
-        className={`lg:hidden fixed top-0 left-0 right-0 h-screen bg-white/80 dark:bg-neutral-900/80 backdrop-blur-lg transform transition-all duration-500 ease-out z-[100] ${
+        className={`lg:hidden fixed top-0 left-0 right-0 h-screen bg-white dark:bg-black transform transition-all duration-500 ease-out z-[100] ${
           isMenuOpen 
             ? 'translate-y-0 opacity-100 pointer-events-auto' 
             : '-translate-y-8 opacity-0 pointer-events-none'
@@ -189,7 +189,7 @@ export function Navigation() {
       </nav>
 
       {/* Mobile Navigation Bar */}
-      <div className="lg:hidden fixed top-4 left-0 right-0 z-[101] flex items-center justify-between px-6">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-[101] flex items-center justify-between px-6 py-4 bg-gradient-to-b from-white to-transparent dark:from-black dark:to-transparent">
         <a href="#" className="text-xl font-gambarino text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors tracking-tight leading-none">
           N.
         </a>
