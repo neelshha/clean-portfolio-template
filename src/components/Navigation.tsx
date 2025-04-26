@@ -130,7 +130,7 @@ export function Navigation() {
       <nav className="fixed left-0 top-0 h-screen w-64 z-[101] hidden lg:flex flex-col">
         <div className="p-8 flex flex-col h-full">
           {/* Logo/Name */}
-          <a href="#" className="text-xl font-gambarino text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors tracking-tight leading-none">
+          <a href="#intro" className="text-xl font-gambarino text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors tracking-tight leading-none">
             N.
           </a>
 
@@ -190,7 +190,7 @@ export function Navigation() {
 
       {/* Mobile Navigation Bar */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-[101] flex items-center justify-between px-6 py-4 bg-gradient-to-b from-white to-transparent dark:from-black dark:to-transparent">
-        <a href="#" className="text-xl font-gambarino text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors tracking-tight leading-none">
+        <a href="#intro" className="text-xl font-gambarino text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors tracking-tight leading-none">
           N.
         </a>
         <div className="flex items-center space-x-4">
