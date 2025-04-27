@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { useInView } from 'framer-motion';
 
 export default function Value() {
   const values = [
@@ -16,26 +18,59 @@ export default function Value() {
     }
   ];
 
+  const controls = useAnimation();
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { margin: '-100px', once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible');
+    }
+  }, [isInView, controls]);
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.3,
+        duration: 1,
+        ease: [0.25, 0.8, 0.25, 1], // easeOutCubic
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 60 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.8, 0.25, 1], // smoother
+      }
+    }
+  };
+
   return (
     <section
       id="values"
       aria-label="Core values section"
+      ref={sectionRef}
       className="min-h-screen w-full flex flex-col items-start justify-center bg-neutral-200 dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
     >
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        variants={containerVariants}
+        initial="hidden"
+        animate={controls}
         className="flex flex-col items-start justify-center text-left max-w-4xl mx-auto"
       >
-        
         <div className="grid md:grid-cols-3 gap-12">
-          {values.map((value, index) => (
+          {values.map((value) => (
             <motion.div
               key={value.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              variants={itemVariants}
               className="flex flex-col"
             >
               <h3 className="font-gambarino text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-neutral-900 dark:text-white">

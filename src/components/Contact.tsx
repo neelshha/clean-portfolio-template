@@ -27,15 +27,17 @@ export default function Contact() {
       aria-labelledby="contact-title"
     >
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1 }}
         className="flex flex-col items-start justify-center text-left max-w-4xl mx-auto w-full"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8 }}
           className="mb-16"
         >
           <h2 className="font-gambarino text-4xl sm:text-5xl md:text-6xl text-neutral-900 dark:text-white leading-tight">
@@ -57,8 +59,9 @@ export default function Contact() {
               rel={link.name !== 'Email' ? 'noopener noreferrer' : undefined}
               className="group"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
             >
               <div className="relative inline-block">
                 <div className="flex items-baseline gap-2">

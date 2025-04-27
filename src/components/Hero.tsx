@@ -19,7 +19,7 @@ export default function Hero() {
           I adapt.<br />
           I create digital<br/>
           experiences that<br/>
-          feel alive.
+          make sense.
         </h1>
       </motion.div>
     </section>
