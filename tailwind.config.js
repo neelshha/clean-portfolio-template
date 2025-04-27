@@ -4,10 +4,7 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        akira: ['AkiraExpanded', 'sans-serif'],
-      },
     },
   },
   plugins: [],
-};
+}
