@@ -2,7 +2,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="min-h-screen w-full flex flex-col items-start justify-center bg-white dark:bg-black text-neutral-900 dark:text-white transition-colors px-6 sm:px-8 py-12 sm:py-8"
+      className="min-h-screen w-full flex flex-col items-start justify-center bg-neutral-200 dark:bg-black text-neutral-900 dark:text-white transition-colors px-6 sm:px-8 py-12 sm:py-8"
       aria-labelledby="about-title"
     >
       <div className="flex flex-col w-full max-w-7xl mx-auto py-24">

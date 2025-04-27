@@ -5,7 +5,7 @@ export function Hero() {
     <section
       id="intro"
       aria-label="Hero section: I code. I design. I adapt. I create digital experiences that feel alive."
-      className="min-h-screen w-full flex flex-col items-start justify-center bg-white dark:bg-black transition-colors px-4 sm:px-8"
+      className="min-h-screen w-full flex flex-col items-start justify-center bg-neutral-200 dark:bg-black transition-colors px-4 sm:px-8"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

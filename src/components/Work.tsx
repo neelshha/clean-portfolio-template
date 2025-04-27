@@ -22,7 +22,7 @@ export function Work() {
   return (
     <section
       id="work"
-      className="min-h-screen w-full flex flex-col items-center justify-center bg-white dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
+      className="min-h-screen w-full flex flex-col items-center justify-center bg-neutral-200 dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
       aria-labelledby="portfolio-title"
     >
       <div className="w-full max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ export function Work() {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="text-xs px-2 py-1 rounded-full border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300"
+                        className="text-xs px-2 py-1 rounded-full border border-neutral-700 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300"
                       >
                         {tech}
                       </span>
@@ -69,7 +69,7 @@ export function Work() {
                     <span>→</span>
                   </a>
 
-                  <hr className="mt-10 border-t border-neutral-300 dark:border-neutral-700 w-full" />
+                  <hr className="mt-10 border-t border-neutral-500 dark:border-neutral-700 w-full" />
                 </div>
               </div>
             </div>

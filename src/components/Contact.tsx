@@ -23,7 +23,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen w-full flex flex-col items-start justify-center bg-white dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
+      className="min-h-screen w-full flex flex-col items-start justify-center bg-neutral-200 dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
       aria-labelledby="contact-title"
     >
       <motion.div
@@ -62,14 +62,14 @@ export function Contact() {
             >
               <div className="relative inline-block">
                 <div className="flex items-baseline gap-2">
-                  <span className="font-gambarino text-2xl sm:text-3xl text-neutral-900 dark:text-white group-hover:text-neutral-700 dark:group-hover:text-neutral-300 transition-colors">
+                  <span className="font-gambarino text-2xl sm:text-3xl text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
                     {link.name}
                   </span>
-                  <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                  <span className="text-sm text-neutral-600 dark:text-neutral-400">
                     {link.name === 'Email' ? 'contact@neelshha.com' : '@neelshha'}
                   </span>
                 </div>
-                <div className="absolute bottom-0 left-0 h-[1px] w-0 group-hover:w-full bg-neutral-400 dark:bg-neutral-600 transition-all duration-500" />
+                <div className="absolute bottom-0 left-0 h-[1px] w-0 group-hover:w-full bg-neutral-600 dark:bg-neutral-600 transition-all duration-500" />
               </div>
             </motion.a>
           ))}

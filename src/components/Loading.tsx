@@ -16,7 +16,7 @@ export function Loading({ setIsLoading }: { setIsLoading: (loading: boolean) => 
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        className="fixed inset-0 flex items-center justify-center p-10 bg-white dark:bg-black z-[200]"
+        className="fixed inset-0 flex items-center justify-center p-10 bg-neutral-200 dark:bg-black z-[200]"
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

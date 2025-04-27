@@ -20,7 +20,7 @@ export function Value() {
     <section
       id="values"
       aria-label="Core values section"
-      className="min-h-screen w-full flex flex-col items-start justify-center bg-white dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
+      className="min-h-screen w-full flex flex-col items-start justify-center bg-neutral-200 dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

@@ -58,7 +58,7 @@ export function Background() {
   return (
     <section
       id="background"
-      className="min-h-screen w-full flex flex-col items-start justify-center bg-white dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
+      className="min-h-screen w-full flex flex-col items-start justify-center bg-neutral-200 dark:bg-black transition-colors px-6 sm:px-8 py-12 sm:py-8"
       aria-labelledby="experience-title"
     >
       <motion.div
@@ -93,10 +93,10 @@ export function Background() {
                   <div className="space-y-2">
                     <div className="text-base text-neutral-900 dark:text-white font-gambarino">{exp.company}</div>
                     <div className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white leading-tight">{exp.role}</div>
-                    <div className="flex flex-row items-center gap-4 text-xs text-neutral-500 mb-1">
+                    <div className="flex flex-row items-center gap-4 text-xs text-neutral-600 dark:text-neutral-500 mb-1">
                       <span>{exp.period}</span>
                     </div>
-                    <div className="text-neutral-700 dark:text-neutral-300 text-sm max-w-2xl leading-relaxed">
+                    <div className="text-neutral-800 dark:text-neutral-300 text-sm max-w-2xl leading-relaxed">
                       {exp.description}
                     </div>
                   </div>
@@ -129,10 +129,10 @@ export function Background() {
                   <div className="space-y-2">
                     <div className="text-base text-neutral-900 dark:text-white font-gambarino">{pos.organization}</div>
                     <div className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white leading-tight">{pos.role}</div>
-                    <div className="flex flex-row items-center gap-4 text-xs text-neutral-500 mb-1">
+                    <div className="flex flex-row items-center gap-4 text-xs text-neutral-600 dark:text-neutral-500 mb-1">
                       <span>{pos.period}</span>
                     </div>
-                    <div className="text-neutral-700 dark:text-neutral-300 text-sm max-w-2xl leading-relaxed">
+                    <div className="text-neutral-800 dark:text-neutral-300 text-sm max-w-2xl leading-relaxed">
                       {pos.description}
                     </div>
                   </div>
