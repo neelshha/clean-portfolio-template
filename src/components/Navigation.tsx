@@ -175,7 +175,7 @@ export function Navigation() {
             <a
               href= {resume}
               download
-              className="underline decoration-dotted underline-offset-2 text-neutral-400 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-sm font-gambarino tracking-tight leading-none flex items-center gap-1"
+              className="underline decoration-dotted underline-offset-2 text-neutral-400 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-md font-gambarino tracking-tight leading-none flex items-center gap-1"
             >
               Resume*
             </a>
