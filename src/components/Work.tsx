@@ -1,5 +1,5 @@
-import aiotize from '../assets/aiotize.png';
-import cyber from '../assets/cyber.png';
+import aiotize from '../assets/aiotize.jpeg';
+import cyber from '../assets/cyber.jpeg';
 
 export function Work() {
   const projects = [

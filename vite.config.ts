@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
-// https://vitejs.dev/config/
+import viteCompression from 'vite-plugin-compression';
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    viteCompression() // Enable gzip compression for production builds
+  ],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
