@@ -54,7 +54,7 @@ const positionsOfResponsibility = [
   },
 ];
 
-export function Background() {
+export default function Background() {
   return (
     <section
       id="background"

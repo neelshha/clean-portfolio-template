@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export function Value() {
+export default function Value() {
   const values = [
     {
       title: "Innovation",

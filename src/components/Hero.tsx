@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export function Hero() {
+export default function Hero() {
   return (
     <section
       id="intro"

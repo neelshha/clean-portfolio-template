@@ -1,7 +1,7 @@
 import aiotize from '../assets/aiotize.jpeg';
 import cyber from '../assets/cyber.jpeg';
 
-export function Work() {
+export default function Work() {
   const projects = [
     {
       title: "Aiotize Inc.",

@@ -1,70 +1,67 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-export function Loading({ setIsLoading }: { setIsLoading: (loading: boolean) => void }) {
+export function Loading({
+  setIsLoading,
+}: {
+  setIsLoading: (loading: boolean) => void;
+}) {
   const [typingDone, setTypingDone] = useState(false);
 
+  // once typing is done, wait 1s then flip isLoading → false
   useEffect(() => {
     if (typingDone) {
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-      }, 1000); // small pause after typing done
-      return () => clearTimeout(timer);
+      const t = setTimeout(() => setIsLoading(false), 1000);
+      return () => clearTimeout(t);
     }
   }, [typingDone, setIsLoading]);
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        className="fixed inset-0 flex items-center justify-center p-10 bg-neutral-200 dark:bg-black z-[200]"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <TypingText setTypingDone={setTypingDone} />
-      </motion.div>
-    </AnimatePresence>
+    <motion.div
+      key="loading-screen"
+      className="fixed inset-0 flex items-center justify-center p-10 bg-neutral-200 dark:bg-black z-[200]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+    >
+      <TypingText setTypingDone={setTypingDone} />
+    </motion.div>
   );
 }
 
-function TypingText({ setTypingDone }: { setTypingDone: (done: boolean) => void }) {
+function TypingText({
+  setTypingDone,
+}: {
+  setTypingDone: (done: boolean) => void;
+}) {
   const text = "Neel Shah *";
   const [displayedText, setDisplayedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      setDisplayedText(text.slice(0, index));
-      index++;
-      if (index > text.length) {
-        clearInterval(typingInterval);
-        setTypingDone(true); // Signal that typing is finished
+    let i = 0;
+    const typeInt = setInterval(() => {
+      setDisplayedText(text.slice(0, i));
+      i++;
+      if (i > text.length) {
+        clearInterval(typeInt);
+        setTypingDone(true);
       }
-    }, 150); // Typing speed
+    }, 150);
 
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500); // Cursor blink
+    const blink = setInterval(() => setShowCursor((v) => !v), 500);
 
     return () => {
-      clearInterval(typingInterval);
-      clearInterval(cursorInterval);
+      clearInterval(typeInt);
+      clearInterval(blink);
     };
   }, [setTypingDone]);
 
   return (
-    <motion.div
-      className="text-4xl sm:text-6xl font-gambarino text-neutral-900 dark:text-white tracking-tight leading-tight"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <div className="text-4xl sm:text-6xl font-gambarino text-neutral-900 dark:text-white tracking-tight leading-tight">
       {displayedText}
-      <span className="inline-block w-2">
-        {showCursor && <motion.span>|</motion.span>}
-      </span>
-    </motion.div>
+      <span className="inline-block w-2">{showCursor && "|"}</span>
+    </div>
   );
 }

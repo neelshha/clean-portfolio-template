@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export function Contact() {
+export default function Contact() {
   const socialLinks = [
     {
       name: 'LinkedIn',

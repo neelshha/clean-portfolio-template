@@ -3,7 +3,7 @@ import { Menu, X, } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 import resume from '../assets/NeelShahResume.pdf';
 
-export function Navigation() {
+export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('intro');
