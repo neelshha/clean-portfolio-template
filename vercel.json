@@ -1,8 +1,14 @@
 {
   "redirects": [
     {
-      "source": "https://neelshha.com/(.*)",
-      "destination": "https://www.neelshha.com/$1",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "neelshha.com"
+        }
+      ],
+      "destination": "https://www.neelshha.com/:1",
       "permanent": true
     }
   ],
