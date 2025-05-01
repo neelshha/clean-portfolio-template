@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const workExperiences = [
   {
     company: "Aiotize Inc.",
-    role: "UI/UX Designer",
+    role: "Product Designer & Fontend Developer",
     period: "Feb 2025 - Present",
     description: "Designing intuitive, accessible, and visually appealing user interfaces for IoT platforms, collaborating closely with developers to enhance user experience and brand identity.",
   },
