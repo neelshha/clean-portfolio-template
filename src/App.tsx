@@ -10,6 +10,7 @@ const Value      = lazy(() => import('./components/Value'));
 const Background = lazy(() => import('./components/Background'));
 const About      = lazy(() => import('./components/About'));
 const Contact    = lazy(() => import('./components/Contact'));
+const Footer     = lazy(() => import('./components/Footer.jsx'));
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +48,7 @@ export default function App() {
                 <About />
                 <Contact />
               </main>
+              <Footer />
             </motion.div>
           </Suspense>
         )}
