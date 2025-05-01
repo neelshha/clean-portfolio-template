@@ -50,7 +50,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 mb-16">
           {socialLinks.map((link, index) => (
             <motion.a
               key={link.name}
@@ -77,6 +77,22 @@ export default function Contact() {
             </motion.a>
           ))}
         </div>
+
+        {/* 🔐 Glorified Secure Footer */}
+        {/* 🔐 Glorified Secure Footer */}
+<div className="w-full mt-24 text-center px-4 text-xs sm:text-base text-neutral-500 dark:text-neutral-400 font-medium tracking-tight">
+  🔒&nbsp;
+  <a
+    href="https://securityheaders.com/?q=https://www.neelshha.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="View Security Headers verification report"
+    className="underline underline-offset-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+  >
+    A+ Security Verified
+  </a>
+  &nbsp;·&nbsp;Built & secured by Neel Shah&nbsp;·&nbsp;© 2025
+</div>
       </motion.div>
     </section>
   );
