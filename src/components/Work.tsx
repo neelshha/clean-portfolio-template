@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
 import aiotize from '../assets/aiotize.jpeg';
 import cyber from '../assets/cyber.jpeg';
+import vulnsniff from '../assets/vulnsniff.jpeg';
 
 export default function Work() {
   const projects = [
+    {
+      title: "VulnSniff",
+      description: "Scan websites for common security issues like XSS or missing headers. Get instant AI explanations and fixes using Groq LLM.",
+      image: vulnsniff,
+      technologies: ["Javascript", "Chrome Extensions API", "HTML/CSS", "DOM APIs", "Fetch API"],
+      demoLink: "https://github.com/neelshha/vulnsniff.git",
+    },
     {
       title: "Aiotize Inc.",
       description: "Logo creation and brand guidelines for Aiotize Inc.",
