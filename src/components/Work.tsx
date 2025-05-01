@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import aiotize from '../assets/aiotize.jpeg';
 import cyber from '../assets/cyber.jpeg';
 import vulnsniff from '../assets/vulnsniff.jpeg';
+import uipath from '../assets/uipath.jpeg';
 
 export default function Work() {
   const projects = [
@@ -18,6 +19,13 @@ export default function Work() {
       image: aiotize,
       technologies: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
       demoLink: "https://www.behance.net/gallery/218932957/Aiotize-Inc-Branding",
+    },
+    {
+      title: "UiPath Vulnerability Assessment Bot",
+      description: "A UiPath bot that automates website vulnerability assessments using Nmap and OpenAI. Generates detailed, AI-powered security reports.",
+      image: uipath,
+      technologies: ["UiPath", "Nmap", "OpenAI", "Python"],
+      demoLink: "https://github.com/aadyamo/uipath-vulnerability-assessment-bot.git",
     },
     {
       title: "Cyber Chakravyuh",
