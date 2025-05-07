@@ -2,41 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Gambarino Font */
 @font-face {
   font-family: 'Gambarino';
   src: url('/font/Gambarino.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
+/* Base Styles */
 @layer base {
   html,
   body {
-    background-color: #e5e5e5;
-    height: 100%;
-    width: 100%;
-    overflow-y: auto;
-    scroll-behavior: smooth;
+    @apply h-full w-full scroll-smooth text-white bg-black;
     font-family: 'Gambarino', sans-serif;
-    scrollbar-width: none;      /* Firefox */
-    -ms-overflow-style: none;   /* IE 10+ */
-    overscroll-behavior: contain;/* Prevents scroll chaining */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS Safari */
-  }
-
-  /* Dark mode */
-  .dark html,
-  .dark body {
-    background-color: black;
+    scrollbar-width: none;              /* Firefox */
+    -ms-overflow-style: none;           /* IE 10+ */
+    -webkit-overflow-scrolling: touch;  /* iOS Safari smooth scroll */
+    overscroll-behavior: contain;       /* Prevents scroll chaining */
   }
 
   body::-webkit-scrollbar,
   html::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
+
+  /* Light mode fallback if needed */
+  body.light {
+    @apply bg-neutral-200 text-neutral-900;
+  }
 }
 
-/* Custom fade-in animation */
+/* Fade In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -52,7 +50,7 @@
   animation: fadeIn 0.6s ease-out forwards;
 }
 
-/* Gradient animation */
+/* Gradient Animation */
 @keyframes gradient-x {
   0%, 100% {
     background-position: 0% 50%;
