@@ -37,7 +37,6 @@ export default function App() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="pt-safe-top bg-white dark:bg-black text-white min-h-screen"
             >
               <Navigation />
               <main>
