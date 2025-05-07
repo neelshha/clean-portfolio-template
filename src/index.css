@@ -20,7 +20,6 @@
 @layer base {
   html,
   body {
-    @apply h-full w-full scroll-smooth text-white bg-black;
     font-family: 'Gambarino', sans-serif;
     scrollbar-width: none;              /* Firefox */
     -ms-overflow-style: none;           /* IE 10+ */
@@ -31,11 +30,6 @@
   body::-webkit-scrollbar,
   html::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
-  }
-
-  /* Light mode fallback if needed */
-  body.light {
-    @apply bg-neutral-200 text-neutral-900;
   }
 }
 
