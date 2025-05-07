@@ -3,9 +3,16 @@ import aiotize from '../assets/aiotize.jpeg';
 import cyber from '../assets/cyber.jpeg';
 import vulnsniff from '../assets/vulnsniff.jpeg';
 import uipath from '../assets/uipath.jpeg';
-
+import threatlens from '../assets/threatlens.jpeg';
 export default function Work() {
   const projects = [
+    {
+      title: "ThreatLens AI",
+      description: "Analyze and summarize threat intelligence reports with AI. Extract IOCs, map MITRE ATT&CK techniques, and export DOCX in a sleek, secure interface.",
+      image: threatlens, // replace with your actual import reference
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "NextAuth", "SWR", "docx", "Markdown"],
+      demoLink: "https://github.com/neelshha/threatlens-ai",
+    },
     {
       title: "VulnSniff",
       description: "Scan websites for common security issues like XSS or missing headers. Get instant AI explanations and fixes using Groq LLM.",
