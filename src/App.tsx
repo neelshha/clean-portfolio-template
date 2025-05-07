@@ -32,11 +32,12 @@ export default function App() {
         {/* main content only after first load completes */}
         {(!isLoading || hasLoadedOnce) && (
           <Suspense fallback={null}>
-            <motion.div
+           <motion.div
               key="app-content"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
+              className="pt-safe-top bg-white dark:bg-black text-white min-h-screen"
             >
               <Navigation />
               <main>
