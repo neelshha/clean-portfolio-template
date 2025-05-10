@@ -4,8 +4,16 @@ import cyber from '../assets/cyber.jpeg';
 import vulnsniff from '../assets/vulnsniff.jpeg';
 import uipath from '../assets/uipath.jpeg';
 import threatlens from '../assets/threatlens.jpeg';
+import tapthatapp from '../assets/tta.jpeg';
 export default function Work() {
   const projects = [
+    {
+      title: "TapThatApp",
+      description: "A lightweight macOS menu bar app for instant app launching via a radial Cmd + Space interface. Features customizable settings, hotkey support, and autostart at login.",
+      image: tapthatapp, // replace with your actual import reference
+      technologies: ["Swift", "SwiftUI", "AppKit", "Launch Agents", "Login Items", "HotKey", "Xcode"],
+      demoLink: "https://github.com/neelshha/TapThatApp",
+    },
     {
       title: "ThreatLens AI",
       description: "Analyze and summarize threat intelligence reports with AI. Extract IOCs, map MITRE ATT&CK techniques, and export DOCX in a sleek, secure interface.",
