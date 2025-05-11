@@ -14,6 +14,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+000-5FF; /* Latin character range */
 }
 
 /* Base Styles */

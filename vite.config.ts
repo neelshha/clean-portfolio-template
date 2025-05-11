@@ -24,4 +24,18 @@ export default defineConfig(({ mode }) => ({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  build: {
+    assetsInlineLimit: 0, // This ensures font files are not inlined
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.name;
+          if (name && name.endsWith('.otf')) {
+            return 'font/[name][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
 }));
