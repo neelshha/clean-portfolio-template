@@ -128,7 +128,7 @@ export default function Work() {
                 className="flex flex-col gap-4 flex-1 cursor-pointer"
               >
                 <div className="flex flex-col gap-4 flex-1">
-                  <div className="w-full aspect-[16/9] overflow-hidden rounded-lg mb-2 ring-1 ring-neutral-200 dark:ring-neutral-800">
+                  <div className="w-full aspect-[16/9] overflow-hidden rounded-lg mb-2">
                     <motion.img
                       src={project.image}
                       alt={project.title}
