@@ -1,5 +1,5 @@
-import { motion, useMotionValue, useTransform, useSpring, EventInfo } from "framer-motion";
-import { MouseEvent } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import aiotize from '../assets/aiotize.jpeg';
 import cyber from '../assets/cyber.jpeg';
 import vulnsniff from '../assets/vulnsniff.jpeg';
@@ -7,6 +7,19 @@ import uipath from '../assets/uipath.jpeg';
 import threatlens from '../assets/threatlens.jpeg';
 import tapthatapp from '../assets/tta.jpeg';
 export default function Work() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // 768px is typical tablet/mobile breakpoint
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const projects = [
     {
       title: "TapThatApp",
@@ -53,6 +66,8 @@ export default function Work() {
   ];
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isMobile) return; // Don't apply 3D effect on mobile
+    
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -68,6 +83,7 @@ export default function Work() {
   };
 
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isMobile) return; // Don't reset transform on mobile
     e.currentTarget.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
   };
 
