@@ -76,7 +76,7 @@ export default function Background() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <h3 className="font-gambarino text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-neutral-900 dark:text-white">
+      <h3 className="font-gambarino text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-orange-600 dark:text-orange-600">
         WORK EXPERIENCE
       </h3>
       <div className="flex flex-col gap-8">
@@ -90,12 +90,12 @@ export default function Background() {
             className="flex flex-row items-start gap-4"
           >
             <div className="space-y-2">
-              <div className="text-base text-neutral-900 dark:text-white font-gambarino">{exp.company}</div>
+              <div className="text-base text-orange-600 dark:text-orange-600 font-gambarino">{exp.company}</div>
               <div className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white leading-tight">{exp.role}</div>
-              <div className="flex flex-row items-center gap-4 text-xs text-neutral-600 dark:text-neutral-500 mb-1">
+              <div className="flex flex-row items-center font-mono gap-4 text-xs text-orange-600 dark:text-orange-600 mb-1">
                 <span>{exp.period}</span>
               </div>
-              <div className="text-neutral-800 dark:text-neutral-300 text-sm max-w-2xl leading-relaxed">
+              <div className="text-neutral-800 font-mono dark:text-neutral-300 text-sm max-w-2xl leading-relaxed">
                 {exp.description}
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function Background() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6 }}
     >
-      <h3 className="font-gambarino text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-neutral-900 dark:text-white">
+      <h3 className="font-gambarino text-lg sm:text-xl md:text-2xl font-semibold mb-6 text-orange-600 dark:text-orange-600">
         POSITIONS OF RESPONSIBILITY
       </h3>
       <div className="flex flex-col gap-8">
@@ -125,12 +125,12 @@ export default function Background() {
             className="flex flex-row items-start gap-4"
           >
             <div className="space-y-2">
-              <div className="text-base text-neutral-900 dark:text-white font-gambarino">{pos.organization}</div>
+              <div className="text-base text-orange-600 dark:text-orange-600 font-gambarino">{pos.organization}</div>
               <div className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white leading-tight">{pos.role}</div>
-              <div className="flex flex-row items-center gap-4 text-xs text-neutral-600 dark:text-neutral-500 mb-1">
+              <div className="flex flex-row items-center font-mono gap-4 text-xs text-orange-600 dark:text-orange-600 mb-1">
                 <span>{pos.period}</span>
               </div>
-              <div className="text-neutral-800 dark:text-neutral-300 text-sm max-w-2xl leading-relaxed">
+              <div className="text-neutral-800 font-mono dark:text-neutral-300 text-sm max-w-2xl leading-relaxed">
                 {pos.description}
               </div>
             </div>

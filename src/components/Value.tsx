@@ -73,7 +73,7 @@ export default function Value() {
               variants={itemVariants}
               className="flex flex-col"
             >
-              <h3 className="font-gambarino text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-neutral-900 dark:text-white">
+              <h3 className="font-gambarino text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-orange-600 dark:text-orange-600">
                 {value.title}
               </h3>
               <p className="text-lg sm:text-xl text-neutral-700 dark:text-neutral-300">

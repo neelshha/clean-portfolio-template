@@ -40,12 +40,12 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h2 className="font-gambarino text-4xl sm:text-5xl md:text-6xl text-neutral-900 dark:text-white leading-tight">
+          <h2 className="font-gambarino text-4xl sm:text-5xl md:text-6xl text-orange-600 dark:text-orange-600 leading-tight">
             Let's
             <br />
             Connect
           </h2>
-          <p className="mt-4 text-neutral-600 dark:text-neutral-400 text-lg sm:text-xl max-w-xl">
+          <p className="mt-4 font-mono text-neutral-600 dark:text-neutral-400 text-sm sm:text-md">
             Available for collaborations, opportunities, or just a friendly chat.
           </p>
         </motion.div>
@@ -68,7 +68,7 @@ export default function Contact() {
                   <span className="font-gambarino text-2xl sm:text-3xl text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
                     {link.name}
                   </span>
-                  <span className="text-sm text-neutral-600 dark:text-neutral-400">
+                  <span className="text-sm text-orange-600 dark:text-orange-600">
                     {link.name === 'Email' ? 'contact@neelshha.com' : '@neelshha'}
                   </span>
                 </div>
@@ -79,15 +79,14 @@ export default function Contact() {
         </div>
 
         {/* 🔐 Glorified Secure Footer */}
-        {/* 🔐 Glorified Secure Footer */}
-<div className="w-full mt-24 text-center px-4 text-xs sm:text-base text-neutral-500 dark:text-neutral-400 font-medium tracking-tight">
+<div className="w-full mt-24 font-mono text-center px-4 text-xs sm:text-base text-neutral-500 dark:text-neutral-400 font-medium tracking-tight">
   🔒&nbsp;
   <a
     href="https://securityheaders.com/?q=https://www.neelshha.com"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="View Security Headers verification report"
-    className="underline underline-offset-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+    className="underline underline-offset-4 hover:text-orange-600 dark:hover:text-orange-600 transition-colors"
   >
     A+ Security Verified
   </a>

@@ -13,13 +13,13 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="flex flex-col items-start justify-center text-left max-w-5xl mx-auto"
       >
-        <h1 className="font-gambarino text-5xl sm:text-6xl md:text-7xl leading-tight text-neutral-900 dark:text-white mb-8">
-          I code.<br />
-          I design.<br />
-          I adapt.<br />
+        <h1 className="font-gambarino text-[2.8rem] sm:text-6xl md:text-7xl leading-tight text-neutral-900 dark:text-white mb-8">
+          I code<span className="text-orange-600">.</span><br />
+          I design<span className="text-orange-600">.</span><br />
+          I adapt<span className="text-orange-600">.</span><br />
           I create digital<br/>
           experiences that<br/>
-          make sense.
+          make sense<span className="text-orange-600">.</span>
         </h1>
       </motion.div>
     </section>

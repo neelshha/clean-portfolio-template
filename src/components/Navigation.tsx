@@ -29,11 +29,11 @@ export default function Navigation() {
   const isActive = (section: string) => activeSection === section;
   const navLinkClass = (section: string) =>
     `block text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-md font-gambarino tracking-tight leading-none ${
-      isActive(section) ? '!text-neutral-900 dark:!text-white font-medium' : ''
+      isActive(section) ? '!text-orange-600 dark:!text-orange-600 font-medium' : ''
     }`;
   const mobileNavLinkClass = (section: string) =>
     `block text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl font-gambarino tracking-tight leading-none ${
-      isActive(section) ? '!text-neutral-900 dark:!text-white font-medium' : ''
+      isActive(section) ? '!text-orange-600 dark:!text-orange-600 font-medium' : ''
     }`;
 
   // Framer Motion variants
@@ -70,28 +70,36 @@ export default function Navigation() {
             exit="exit"
             className="lg:hidden fixed top-0 left-0 right-0 h-screen bg-neutral-200 dark:bg-black z-[100]"
           >
-            <motion.div className="h-full flex flex-col justify-center items-start px-8">
-              <div className="space-y-4">
+            <motion.div className="h-full flex flex-col justify-center items-start px-8 pb-8">
+              <div className="space-y-6 w-full">
                 {['intro', 'work', 'values', 'background', 'about', 'contact'].map(sec => (
                   <motion.a
                     key={sec}
                     href={`#${sec}`}
                     variants={linkVariants}
-                    className={mobileNavLinkClass(sec)}
+                    className={
+                      `${mobileNavLinkClass(sec)} py-1 pl-2 pr-6 relative transition-all flex items-center justify-between` +
+                      (isActive(sec)
+                        ? ' !text-orange-600 dark:!text-orange-600 font-medium'
+                        : ' hover:pl-3')
+                    }
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {sec.charAt(0).toUpperCase() + sec.slice(1)}
+                    <span>{sec.charAt(0).toUpperCase() + sec.slice(1)}</span>
                   </motion.a>
                 ))}
-                <motion.a
-                  href={resume}
-                  download
-                  variants={linkVariants}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="underline decoration-dotted underline-offset-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-xl font-gambarino tracking-tight leading-none flex items-center gap-1"
-                >
-                  Resume*
-                </motion.a>
+                {/* Divider above Resume */}
+                <div className="border-t border-neutral-300 dark:border-neutral-800 pt-4 mt-2 w-full">
+                  <motion.a
+                    href={resume}
+                    download
+                    variants={linkVariants}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="underline decoration-dotted underline-offset-2 text-neutral-500 dark:text-neutral-400 hover:text-orange-600 dark:hover:text-orange-600 transition-colors text-xl font-gambarino tracking-tight leading-none flex items-center gap-1 pt-2"
+                  >
+                    Resume*
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -106,7 +114,7 @@ export default function Navigation() {
         className="fixed left-0 top-0 h-screen w-64 z-[101] hidden lg:flex flex-col"
       >
         <div className="p-8 flex flex-col h-full">
-          <a href="#intro" className="text-xl font-gambarino text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors tracking-tight leading-none">
+          <a href="#intro" className="text-xl font-gambarino text-orange-600 dark:text-orange-600 hover:text-orange-800 dark:hover:text-orange-800 transition-colors tracking-tight leading-none">
             N.
           </a>
           <div className="flex-1 flex flex-col justify-center space-y-4">
@@ -128,7 +136,7 @@ export default function Navigation() {
               transition={{ duration: 1, delay: 0.1 }}
               href={resume}
               download
-              className="underline decoration-dotted underline-offset-2 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors text-md font-gambarino tracking-tight leading-none flex items-center gap-1"
+              className="underline decoration-dotted underline-offset-2 text-neutral-500 dark:text-neutral-400 hover:text-orange-600 dark:hover:text-orange-600 transition-colors text-md font-gambarino tracking-tight leading-none flex items-center gap-1"
             >
               Resume*
             </motion.a>
@@ -151,7 +159,7 @@ export default function Navigation() {
         transition={{ duration: 1 }}
         className="lg:hidden fixed top-0 left-0 right-0 z-[101] flex items-center justify-between px-6 py-4 bg-gradient-to-b from-neutral-200 to-transparent dark:from-black dark:to-transparent"
       >
-        <a href="#intro" className="text-xl font-gambarino text-neutral-900 dark:text-white hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors tracking-tight leading-none">
+        <a href="#intro" className="text-xl font-gambarino text-orange-600 dark:text-orange-600 hover:text-orange-800 dark:hover:text-orange-800 transition-colors tracking-tight leading-none">
           N.
         </a>
         <div className="flex items-center space-x-4">

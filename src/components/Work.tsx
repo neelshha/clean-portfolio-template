@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, useSpring, EventInfo } from "framer-motion";
+import { MouseEvent } from "react";
 import aiotize from '../assets/aiotize.jpeg';
 import cyber from '../assets/cyber.jpeg';
 import vulnsniff from '../assets/vulnsniff.jpeg';
@@ -51,6 +52,25 @@ export default function Work() {
     },
   ];
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = (y - centerY) / 15;
+    const rotateY = (centerX - x) / 15;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.currentTarget.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+  };
+
   return (
     <motion.section
       id="work"
@@ -68,56 +88,58 @@ export default function Work() {
       <motion.div
         className="w-full max-w-6xl mx-auto"
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-5 sm:gap-y-10 gap-y-14">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="group h-full flex flex-col p-6"
+              className="group h-full flex border border-orange-500/20 dark:border-orange-500/20 rounded-xl flex-col p-6  backdrop-blur-sm transition-all duration-300 hover:border-orange-500/50 hover:dark:border-orange-500/30"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                transformStyle: 'preserve-3d',
+                transition: 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
+                willChange: 'transform'
+              }}
             >
-              <div className="flex flex-col gap-4 flex-1">
-                <div className="w-full aspect-[16/9] overflow-hidden rounded-xl mb-2">
-                  <motion.img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover rounded-xl"
-                    loading="lazy"
-                    initial={{ scale: 1.05 }}
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.5 }}
-                  />
+              <a
+                href={project.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View project: ${project.title}`}
+                className="flex flex-col gap-4 flex-1 cursor-pointer"
+              >
+                <div className="flex flex-col gap-4 flex-1">
+                  <div className="w-full aspect-[16/9] overflow-hidden rounded-lg mb-2 ring-1 ring-neutral-200 dark:ring-neutral-800">
+                    <motion.img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      initial={{ scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                    />
+                  </div>
+                  <h3 className="font-gambarino text-[1.45rem] sm:text-2xl font-semibold text-neutral-900 dark:text-white mb-1 leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className="text-neutral-600 dark:text-neutral-400 font-mono text-[1rem] leading-relaxed mb-3">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="text-xs px-2.5 py-1 rounded-full border border-orange-500/20 dark:border-orange-500/20 text-orange-700 dark:text-orange-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="font-gambarino text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-white mb-1">
-                  {project.title}
-                </h3>
-                <p className="text-neutral-700 dark:text-neutral-300 text-base leading-relaxed mb-2">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="text-xs px-2 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-neutral-800"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex-1" />
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 py-2  text-white dark:text-neutral-200 text-sm font-semibold  hover:opacity-80 transition"
-                >
-                  View Project
-                  <span>→</span>
-                </a>
-              </div>
-              <hr className="mt-6 border-t border-neutral-200 dark:border-neutral-700 w-full" />
+              </a>
             </motion.div>
           ))}
         </div>
