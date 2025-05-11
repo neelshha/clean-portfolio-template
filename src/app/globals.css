@@ -1,9 +1,6 @@
 @font-face {
-  font-family: 'Gambarino';
-  src: url('/font/Gambarino.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  font-family: 'HealTheWebB';
+  src: url('/font/HealTheWebB.otf') format('opentype');
 }
 
 @tailwind base;
@@ -36,6 +33,6 @@ body {
 
 @layer base {
   .font-gambarino {
-    font-family: 'Gambarino', serif;
+    font-family: 'HealTheWebB', serif;
   }
 } 

@@ -7,21 +7,17 @@
   width: 100%;
 }
 
-/* Gambarino Font */
+/* HealTheWebB Font */
 @font-face {
-  font-family: 'Gambarino';
-  src: url('/font/Gambarino.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+000-5FF; /* Latin character range */
+  font-family: 'HealTheWebB';
+  src: url('/font/HealTheWebB.otf') format('opentype');
 }
 
 /* Base Styles */
 @layer base {
   html,
   body {
-    font-family: 'Gambarino', sans-serif;     /* Prevents scroll chaining */
+    font-family: 'HealTheWebB', sans-serif;     /* Prevents scroll chaining */
   }
 
   body::-webkit-scrollbar,
