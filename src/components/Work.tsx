@@ -9,7 +9,7 @@ export default function Work() {
   const projects = [
     {
       title: "TapThatApp",
-      description: "A lightweight macOS menu bar app for instant app launching via a radial Cmd + Space interface. Features customizable settings, hotkey support, and autostart at login.",
+      description: "A lightweight macOS menu bar app for instant app launching via a radial Option + Space interface. Features customizable settings, hotkey support, and autostart at login.",
       image: tapthatapp, // replace with your actual import reference
       technologies: ["Swift", "SwiftUI", "AppKit", "Launch Agents", "Login Items", "HotKey", "Xcode"],
       demoLink: "https://github.com/neelshha/TapThatApp",
