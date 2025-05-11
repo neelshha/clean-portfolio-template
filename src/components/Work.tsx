@@ -54,7 +54,7 @@ export default function Work() {
   return (
     <motion.section
       id="work"
-      className="min-h-screen w-full flex flex-col items-center justify-center bg-neutral-200 dark:bg-black transition-colors px-5 py-12 sm:py-8 md:pl-[12%]"
+      className="min-h-screen w-full flex flex-col items-center justify-center bg-neutral-200 dark:bg-black transition-colors py-12 sm:py-8 md:pl-[12%]"
       aria-labelledby="portfolio-title"
       initial="hidden"
       whileInView="visible"
