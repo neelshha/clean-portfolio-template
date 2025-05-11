@@ -4,7 +4,7 @@ const workExperiences = [
   {
     company: "Aiotize Inc.",
     role: "Product Designer & Fontend Developer",
-    period: "Feb 2025 - Present",
+    period: "Feb 2025 - May 2025",
     description: "Designing intuitive, accessible, and visually appealing user interfaces for IoT platforms, collaborating closely with developers to enhance user experience and brand identity.",
   },
   {
