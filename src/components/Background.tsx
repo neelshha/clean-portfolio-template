@@ -90,7 +90,7 @@ export default function Background() {
             className="flex flex-row items-start gap-4"
           >
             <div className="space-y-2">
-              <div className="text-base text-orange-600 dark:text-orange-600 font-gambarino">{exp.company}</div>
+              <div className="text-base text-orange-600 dark:text-orange-600 font-mono">{exp.company}</div>
               <div className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white leading-tight">{exp.role}</div>
               <div className="flex flex-row items-center font-mono gap-4 text-xs text-orange-600 dark:text-orange-600 mb-1">
                 <span>{exp.period}</span>
@@ -125,7 +125,7 @@ export default function Background() {
             className="flex flex-row items-start gap-4"
           >
             <div className="space-y-2">
-              <div className="text-base text-orange-600 dark:text-orange-600 font-gambarino">{pos.organization}</div>
+              <div className="text-base text-orange-600 dark:text-orange-600 font-mono">{pos.organization}</div>
               <div className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-white leading-tight">{pos.role}</div>
               <div className="flex flex-row items-center font-mono gap-4 text-xs text-orange-600 dark:text-orange-600 mb-1">
                 <span>{pos.period}</span>
