@@ -2,124 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Preload Important Font -->
-    <link rel="preload" href="/font/HealTheWebB.otf" as="font" type="font/otf" crossorigin="anonymous" />
-
-    <!-- Primary SEO Meta Tags -->
-    <title>Neel Shah</title>
-    <meta name="title" content="Neel Shah - Developer, Designer, Problem Solver">
-    <meta name="description" content="Portfolio of Neel Shah - Showcasing development, UI/UX design, and innovative digital experiences.">
-    <meta name="author" content="Neel Shah">
-    <meta name="keywords" content="Neel Shah, portfolio, web developer, UI/UX designer, React developer, frontend engineer, website design, creative developer, digital experiences, problem solver, software engineer, technology enthusiast, coding, programming, web design, user experience, user interface, responsive design, modern web applications, digital portfolio, personal website, web development, design portfolio, creative coding, innovative solutions, technology projects, software development, programming portfolio, web technologies, frontend development, backend development, full-stack developer, software projects, coding portfolio, cybersecurity, data science, machine learning, artificial intelligence, cloud computing, mobile development, game development, open source projects, tech enthusiast, technology trends, digital innovation">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="google" content="notranslate">
-    <meta name="revisit-after" content="1 days">
-    <meta name="language" content="English">
-    <meta name="distribution" content="global">
-    <meta name="rating" content="general">
-    <link rel="canonical" href="https://neelshha.com/">
-
-    <!-- Additional Performance & Accessibility Meta Tags -->
-    <meta name="format-detection" content="telephone=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Neel Shah">
-    <meta name="application-name" content="Neel Shah Portfolio">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="width">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="msapplication-config" content="/browserconfig.xml">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
-
-    <!-- Theme Color -->
-    <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#e5e5e5">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
-    <meta name="msapplication-TileImage" content="/favicon.png">
-    <meta name="msapplication-TileColor" content="#000000">
-
-    <!-- Viewport -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-    
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://neelshha.com/" />
-    <meta property="og:title" content="Neel Shah - Developer, Designer, Problem Solver" />
-    <meta property="og:description" content="Portfolio of Neel Shah - Showcasing development, UI/UX design, and innovative digital experiences." />
-    <meta property="og:image" content="https://neelshha.com/preview.png" />
-    <meta property="og:site_name" content="Neel Shah Portfolio" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://neelshha.com/" />
-    <meta name="twitter:title" content="Neel Shah - Developer, Designer, Problem Solver" />
-    <meta name="twitter:description" content="Portfolio of Neel Shah - Showcasing development, UI/UX design, and innovative digital experiences." />
-    <meta name="twitter:image" content="https://neelshha.com/preview.png" />
-    <meta name="twitter:creator" content="@neelshha" />
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Neel Shah",
-      "url": "https://neelshha.com",
-      "image": "https://neelshha.com/preview.png",
-      "sameAs": [
-        "https://twitter.com/neelshha"
-      ],
-      "jobTitle": "Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Self-employed"
-      },
-      "description": "Developer, Designer, and Problem Solver specializing in web development, UI/UX design, and innovative digital experiences.",
-      "knowsAbout": [
-        "Web Development",
-        "UI/UX Design",
-        "React",
-        "Frontend Development",
-        "Software Engineering",
-        "Problem Solving"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Neel Shah Portfolio",
-      "url": "https://neelshha.com",
-      "description": "Portfolio of Neel Shah - Showcasing development, UI/UX design, and innovative digital experiences.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://neelshha.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <!-- Additional Performance Optimizations -->
-    <link rel="dns-prefetch" href="https://neelshha.com">
-    <link rel="preconnect" href="https://neelshha.com" crossorigin>
+    <meta name="description" content="A modern React project starter." />
+    <meta name="theme-color" content="#ffffff">
+    <title>Minimal Portfolio</title>
   </head>
-
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

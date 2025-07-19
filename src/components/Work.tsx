@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import aiotize from '../assets/aiotize.jpeg';
-import cyber from '../assets/cyber.jpeg';
-import vulnsniff from '../assets/vulnsniff.jpeg';
-import uipath from '../assets/uipath.jpeg';
-import threatlens from '../assets/threatlens.jpeg';
-import tapthatapp from '../assets/tta.jpeg';
 export default function Work() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -22,46 +16,40 @@ export default function Work() {
 
   const projects = [
     {
-      title: "TapThatApp",
-      description: "A lightweight macOS menu bar app for instant app launching via a radial Option + Space interface. Features customizable settings, hotkey support, and autostart at login.",
-      image: tapthatapp, // replace with your actual import reference
-      technologies: ["Swift", "SwiftUI", "AppKit", "Launch Agents", "Login Items", "HotKey", "Xcode"],
-      demoLink: "https://github.com/neelshha/TapThatApp",
+      title: "Project One",
+      description: "A brief description of Project One, highlighting its main features and the problems it solves. This is a placeholder text.",
+      image: "https://picsum.photos/seed/project1/400/225",
+      technologies: ["React", "TypeScript", "Node.js", "GraphQL"],
     },
     {
-      title: "ThreatLens AI",
-      description: "Analyze and summarize threat intelligence reports with AI. Extract IOCs, map MITRE ATT&CK techniques, and export DOCX in a sleek, secure interface.",
-      image: threatlens, // replace with your actual import reference
-      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "NextAuth", "SWR", "docx", "Markdown"],
-      demoLink: "https://github.com/neelshha/threatlens-ai",
+      title: "Project Two",
+      description: "A brief description of Project Two, highlighting its main features and the problems it solves. This is a placeholder text.",
+      image: "https://picsum.photos/seed/project2/400/225",
+      technologies: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
     },
     {
-      title: "VulnSniff",
-      description: "Scan websites for common security issues like XSS or missing headers. Get instant AI explanations and fixes using Groq LLM.",
-      image: vulnsniff,
-      technologies: ["Javascript", "Chrome Extensions API", "HTML/CSS", "DOM APIs", "Fetch API"],
-      demoLink: "https://github.com/neelshha/vulnsniff.git",
+      title: "Project Three",
+      description: "A brief description of Project Three, highlighting its main features and the problems it solves. This is a placeholder text.",
+      image: "https://picsum.photos/seed/project3/400/225",
+      technologies: ["Vue", "Firebase", "SCSS"],
     },
     {
-      title: "Aiotize Inc.",
-      description: "Logo creation and brand guidelines for Aiotize Inc.",
-      image: aiotize,
-      technologies: ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
-      demoLink: "https://www.behance.net/gallery/218932957/Aiotize-Inc-Branding",
+      title: "Project Four",
+      description: "A brief description of Project Four, highlighting its main features and the problems it solves. This is a placeholder text.",
+      image: "https://picsum.photos/seed/project4/400/225",
+      technologies: ["SvelteKit", "TypeScript", "tRPC"],
     },
     {
-      title: "UiPath Vulnerability Assessment Bot",
-      description: "A UiPath bot that automates website vulnerability assessments using Nmap and OpenAI. Generates detailed, AI-powered security reports.",
-      image: uipath,
-      technologies: ["UiPath", "Nmap", "OpenAI", "Python"],
-      demoLink: "https://github.com/aadyamo/uipath-vulnerability-assessment-bot.git",
+      title: "Project Five",
+      description: "A brief description of Project Five, highlighting its main features and the problems it solves. This is a placeholder text.",
+      image: "https://picsum.photos/seed/project5/400/225",
+      technologies: ["Python", "Django", "Docker"],
     },
     {
-      title: "Cyber Chakravyuh",
-      description: "Website for MPSTME's official Cybersecurity Club",
-      image: cyber,
-      technologies: ["HTML", "CSS", "Javascript"],
-      demoLink: "https://www.cyberchakravyuh.in/",
+      title: "Project Six",
+      description: "A brief description of Project Six, highlighting its main features and the problems it solves. This is a placeholder text.",
+      image: "https://picsum.photos/seed/project6/400/225",
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
   ];
 
@@ -120,12 +108,9 @@ export default function Work() {
                 willChange: 'transform'
               }}
             >
-              <a
-                href={project.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`View project: ${project.title}`}
-                className="flex flex-col gap-4 flex-1 cursor-pointer"
+              <div
+                aria-label={`Project: ${project.title}`}
+                className="flex flex-col gap-4 flex-1"
               >
                 <div className="flex flex-col gap-4 flex-1">
                   <div className="w-full aspect-[16/9] overflow-hidden rounded-lg mb-2">
@@ -155,7 +140,7 @@ export default function Work() {
                     ))}
                   </div>
                 </div>
-              </a>
+              </div>
             </motion.div>
           ))}
         </div>

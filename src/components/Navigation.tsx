@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
-import resume from '../assets/NeelShahResume.pdf';
+import resume from '../assets/resume.pdf';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Navigation() {
